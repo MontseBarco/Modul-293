@@ -1,143 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commission - Montserrat Barco</title>
+    <meta name="description" content="The Commision Page to my Portfolio.">
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/assets/images/painterIconTitle.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 
-        <title>Commission - Montserrat Barco</title>
+    <link rel="stylesheet" href="../css/form.css">
+    <link rel="stylesheet" href="../css/style.css">
 
-        <meta name="description" content="The Commision Page to my Portfolio.">
+    <script src="../javascript/responsive.js" defer></script>
+</head>
 
-        <link rel="icon" type="image/png" href="/assets/images/painterIconTitle.png">
+<body>
+    <header>
+        <button aria-label="Open menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="commission.html" aria-current="page"><b>Commission</b></a></li>
+                <li><a href="about.html">About Me</a></li>
+            </ul>
+        </nav>
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <a href="https://www.instagram.com/macaroniandcheese_101_" aria-label="Visit my instagram profile."
+            target="_blank" rel="noreferrer">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+    </header>
 
-        <link rel="stylesheet" href="../css/form.css">
-        <link rel="stylesheet" href="../css/style.css">
-
-
-        <script src="../javascript/responsive.js" defer></script>
-    </head>
-
-    <body>
-        <header class="main-nav">
-            <button class="mobile-toggle" aria-label="Open menu">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-        
-            <nav class="nav-links">
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="commission.html" aria-current="page"><b>Commission</b></a></li>
-                    <li><a href="about.html">About Me</a></li>
-                </ul>
-            </nav>
-        
-            <a class="social-icon" href="https://www.instagram.com/macaroniandcheese_101_"
-                aria-label="Visit my instagram profile." target="_blank" rel="noreferrer">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
+    <main>
+        <header>
+            <h1>Art Commissions</h1>
         </header>
 
-        <main>
-            <header class="main-header">
-                <h1>Art Commissions</h1>
-            </header>
+        <section>
+            <form action="https://gibm.becknet.ch/formular/formular.php" method="POST" enctype="multipart/form-data">
 
-            <form class="form-container" action="https://gibm.becknet.ch/formular/formular.php" method="POST" enctype="multipart/form-data">
                 <fieldset id="contact">
                     <legend>Contact Information</legend>
 
-                    <p class="form-row">
-                        <label for="firstnameInp">First Name:</label>
-                        <input class="input-group" id="firstnameInp" name="first_name" type="text" required placeholder="Bob">
-                        <label for="secondnameInp">Surname:</label>
-                        <input class="input-group" id="secondnameInp" name="last_name" type="text" required placeholder="Barney">
-                    </p>
+                    <label for="firstnameInp">First Name:</label>
+                    <input id="firstnameInp" name="first_name" type="text" required placeholder="Bob">
+
+                    <label for="secondnameInp">Surname:</label>
+                    <input id="secondnameInp" name="last_name" type="text" required placeholder="Barney">
 
                     <fieldset>
                         <legend>Gender</legend>
 
-                        <p>
-                            <input type="radio" id="maleInp" name="gender" value="male" required>
-                            <label for="maleInp">Male</label>
-                        </p>
+                        <input type="radio" id="maleInp" name="gender" value="male" required>
+                        <label for="maleInp">Male</label>
 
-                        <p>
-                            <input type="radio" id="femaleInp" name="gender" value="female">
-                            <label for="femaleInp">Female</label>
-                        </p>
+                        <input type="radio" id="femaleInp" name="gender" value="female">
+                        <label for="femaleInp">Female</label>
 
-                        <p>
-                            <input type="radio" id="noInp" name="gender" value="other">
-                            <label for="noInp">Other</label>
-                        </p>
+                        <input type="radio" id="noInp" name="gender" value="other">
+                        <label for="noInp">Other</label>
                     </fieldset>
 
-                    <p>
-                        <label for="emailInp">E-mail:</label>
-                        <input class="input-group" id="emailInp" name="client_email" type="email" required autocomplete="email" placeholder="you@example.com">
-                    </p>
+                    <label for="emailInp">E-mail:</label>
+                    <input id="emailInp" name="client_email" type="email" required autocomplete="email"
+                        placeholder="you@example.com">
 
-                    <p>
-                        <label for="phoneInp">Phone Number:</label>
-                        <input class="input-group" id="phoneInp" name="client_phone" type="tel" autocomplete="tel" pattern="[0-9\+\-\s]+" placeholder="+41 79 123 45 67">
-                    </p>
+                    <label for="phoneInp">Phone Number:</label>
+                    <input id="phoneInp" name="client_phone" type="tel" autocomplete="tel" pattern="[0-9\+\-\s]+"
+                        placeholder="+41 79 123 45 67">
 
-                    <p>
-                        <label for="urlInp">Social Media Link:</label> 
-                        <input class="input-group" id="urlInp" name="client_url" type="url" placeholder="https://instagram.com/...">
-                    </p>
-
+                    <label for="urlInp">Social Media Link:</label>
+                    <input id="urlInp" name="client_url" type="url" placeholder="https://instagram.com/...">
                 </fieldset>
 
                 <fieldset id="commission-details">
                     <legend>Illustration Commission</legend>
 
-                    <p>
-                        <label for="typeInp">Commission Type:</label>
+                    <label for="typeInp">Commission Type:</label>
+                    <select id="typeInp" name="commission_type" required>
+                        <option value="">-- Please select --</option>
+                        <option value="sketch">Sketch</option>
+                        <option value="lineart">Lineart</option>
+                        <option value="full_color">Full Color</option>
+                    </select>
 
-                        <select id="typeInp" name="commission_type" required>
-                            <option value="">-- Please select --</option>
-                            <option value="sketch">Sketch</option>
-                            <option value="lineart">Lineart</option>
-                            <option value="full_color">Full Color</option>
-                        </select>
-                    </p>
+                    <label for="charactersInp">Number of Characters:</label>
+                    <input id="charactersInp" name="character_count" type="number" max="8" value="0">
 
-                    <p>
-                        <label for="charactersInp">Number of Characters:</label>
-                        <input id="charactersInp" name="character_count" type="number" max="8" value="0">
-                    </p>
-
-                    <p>
-                        <label for="dateInp">Desired Deadline:</label>
-                        <input id="dateInp" name="deadline" type="date">
-                    </p>
+                    <label for="dateInp">Desired Deadline:</label>
+                    <input id="dateInp" name="deadline" type="date">
 
                     <fieldset>
                         <legend>Add-ons (Multiple Selection)</legend>
 
-                        <p>
-                            <input type="checkbox" id="bgInp" name="addons[]" value="background">
-                            <label for="bgInp">Background</label>
-                        </p>
+                        <input type="checkbox" id="bgInp" name="addons[]" value="background">
+                        <label for="bgInp">Background</label>
 
-                        <p>
-                            <input type="checkbox" id="commercialInp" name="addons[]" value="commercial">
-                            <label for="commercialInp">Commercial Use</label>
-                        </p>
+                        <input type="checkbox" id="commercialInp" name="addons[]" value="commercial">
+                        <label for="commercialInp">Commercial Use</label>
                     </fieldset>
                 </fieldset>
+
+                <button type="submit">Send Commission Request</button>
             </form>
-        </main>
-    </body>
+        </section>
+
+        <footer>
+            <small>&copy; 2026 Montserrat Barco Montemayor - All rights reserved. <strong>All of them.</strong></small>
+        </footer>
+    </main>
+</body>
 
 </html>
