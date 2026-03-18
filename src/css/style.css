@@ -39,7 +39,7 @@ body {
 
 main {
     min-width: 320px;
-    min-height: 100vh;
+    min-height: calc(100vh - 105px);
 }
 
 p, a {
@@ -62,19 +62,24 @@ i, a {
     transition: transform 0.3s ease, color 0.3s ease;
 
     &:hover {
-        transform: translateY(-4px);
+        transform: translateY(-2px);
     }
+}
+
+nav ul li a,
+nav ul li i {
+    transition: transform 0.3s ease;
+    transform: translateY(0);
 }
 
 nav ul li:hover {
+    & a {
+        transform: translateY(-2px);
+    }
 
-    & a, & i {
+    & a:hover i {
         transform: none;
     }
-}
-
-a:hover i {
-    transform: none;
 }
 
 .site-header {
