@@ -20,15 +20,15 @@
     <link rel="stylesheet" href="../css/style.css">
 
     <script src="../javascript/responsive.js" defer></script>
-</head>
+</head> 
 
 <body>
-    <header>
-        <button aria-label="Open menu">
+    <header class="site-header">
+        <button id="nav-burger-menu" class="icon nav-burger-menu" aria-label="Open navigation">
             <i class="fa-solid fa-bars"></i>
         </button>
 
-        <nav>
+        <nav id="site-nav" class="site-nav">
             <ul>
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
@@ -37,87 +37,139 @@
             </ul>
         </nav>
 
-        <a href="https://www.instagram.com/macaroniandcheese_101_" aria-label="Visit my instagram profile."
+        <a class="icon" href="https://www.instagram.com/macaroniandcheese_101_" aria-label="Visit my instagram profile."
             target="_blank" rel="noreferrer">
             <i class="fa-brands fa-instagram"></i>
         </a>
     </header>
 
     <main>
-        <header>
+        <header class="main-header">
             <h1>Art Commissions</h1>
         </header>
 
-        <section>
-            <form action="https://gibm.becknet.ch/formular/formular.php" method="POST" enctype="multipart/form-data">
+        <section class="main-content">
+            <form class="form" action="https://gibm.becknet.ch/formular/formular.php" method="POST" enctype="multipart/form-data">
 
-                <fieldset id="contact">
-                    <legend>Contact Information</legend>
+                <fieldset class="fieldset" id="contact">
+                    <legend class="legend">Contact Information</legend>
 
-                    <label for="firstnameInp">First Name:</label>
-                    <input id="firstnameInp" name="first_name" type="text" required placeholder="Bob">
+                    <div class="form-row">
+                        <p class="bar-input">
+                            <label for="firstnameInp">First Name:</label>
+                            <input id="firstnameInp" name="first_name" type="text" required placeholder="Bob">
+                        </p>
+    
+                        <p class="bar-input">
+                            <label for="secondnameInp">Surname:</label>
+                            <input id="secondnameInp" name="last_name" type="text" required placeholder="Barney">
+                        </p>
+                    </div>
 
-                    <label for="secondnameInp">Surname:</label>
-                    <input id="secondnameInp" name="last_name" type="text" required placeholder="Barney">
-
-                    <fieldset>
+                    <fieldset class="form-row fake-fieldset">
                         <legend>Gender</legend>
 
-                        <input type="radio" id="maleInp" name="gender" value="male" required>
-                        <label for="maleInp">Male</label>
+                        <p class="radio-input">
+                            <input type="radio" id="maleInp" name="gender" value="male" required>
+                            <label for="maleInp">Male</label>
+                        </p>
 
-                        <input type="radio" id="femaleInp" name="gender" value="female">
-                        <label for="femaleInp">Female</label>
+                        <p class="radio-input">
+                            <input type="radio" id="femaleInp" name="gender" value="female">
+                            <label for="femaleInp">Female</label>
+                        </p>
 
-                        <input type="radio" id="noInp" name="gender" value="other">
-                        <label for="noInp">Other</label>
+                        <p class="radio-input">
+                            <input type="radio" id="noInp" name="gender" value="other">
+                            <label for="noInp">Other</label>
+                        </p>
                     </fieldset>
 
-                    <label for="emailInp">E-mail:</label>
-                    <input id="emailInp" name="client_email" type="email" required autocomplete="email"
-                        placeholder="you@example.com">
+                    <p class="bar-input">
+                        <label for="emailInp">E-mail:</label>
+                        <input id="emailInp" name="client_email" type="email" required autocomplete="email"
+                            placeholder="you@example.com">
+                    </p>
 
-                    <label for="phoneInp">Phone Number:</label>
-                    <input id="phoneInp" name="client_phone" type="tel" autocomplete="tel" pattern="[0-9\+\-\s]+"
-                        placeholder="+41 79 123 45 67">
-
-                    <label for="urlInp">Social Media Link:</label>
-                    <input id="urlInp" name="client_url" type="url" placeholder="https://instagram.com/...">
+                    <div class="form-row">
+                        <p class="bar-input">
+                            <label for="phoneInp">Phone Number:</label>
+                            <input id="phoneInp" name="client_phone" type="tel" autocomplete="tel" pattern="[0-9\+\-\s]+"
+                                placeholder="+41 79 123 45 67">
+                        </p>
+    
+                        <p class="bar-input">
+                            <label for="urlInp">Social Media Link:</label>
+                            <input id="urlInp" name="client_url" type="url" placeholder="https://instagram.com/...">
+                        </p>
+                    </div>
                 </fieldset>
+                <br>
+                <fieldset class="fieldset" id="commission-details">
+                    <legend class="legend">Illustration Commission</legend>
+                
+                    <p class="bar-input">
+                        <label for="typeInp">Commission Type:</label>
+                        <select id="typeInp" name="commission_type" required>
+                            <option value="sketch">Sketch</option>
+                            <option value="lineart">Lineart</option>
+                            <option value="full_color">Full Color</option>
+                        </select>
+                    </p>
+                
+                    <p class="bar-input">
+                        <label for="charactersInp">Number of Characters:</label>
+                        <input id="charactersInp" name="character_count" type="number" min="0" max="8" value="0">
+                    </p>
+                
+                    <p class="bar-input">
+                        <label for="dateInp">Desired Deadline:</label>
+                        <input id="dateInp" name="deadline" type="date">
+                    </p>
+                
+                    <p class="bar-input">
+                        <label for="detailsInp">Additional Artwork Details:</label>
+                        <textarea id="detailsInp" name="artwork_details" rows="3"
+                            placeholder="Describe your vision, character poses, references, etc."></textarea>
+                    </p>
+                
+                    <p class="bar-input">
+                        <label for="fileInp">Reference Images:</label>
+                        <input id="fileInp" name="reference_images[]" type="file" accept="image/*" multiple>
+                    </p>
+                
+                    <fieldset class="fake-fieldset">
+                        <legend>Add-ons</legend>
+                
+                        <div class="fake-fieldset-content">
+                            <p class="mult-input">
+                                <input type="checkbox" id="bgInp" name="addons[]" value="background">
+                                <label for="bgInp">Background</label>
+                            </p>
+                
+                            <p class="mult-input">
+                                <input type="checkbox" id="commercialInp" name="addons[]" value="commercial">
+                                <label for="commercialInp">Commercial Use</label>
+                            </p>
 
-                <fieldset id="commission-details">
-                    <legend>Illustration Commission</legend>
-
-                    <label for="typeInp">Commission Type:</label>
-                    <select id="typeInp" name="commission_type" required>
-                        <option value="">-- Please select --</option>
-                        <option value="sketch">Sketch</option>
-                        <option value="lineart">Lineart</option>
-                        <option value="full_color">Full Color</option>
-                    </select>
-
-                    <label for="charactersInp">Number of Characters:</label>
-                    <input id="charactersInp" name="character_count" type="number" max="8" value="0">
-
-                    <label for="dateInp">Desired Deadline:</label>
-                    <input id="dateInp" name="deadline" type="date">
-
-                    <fieldset>
-                        <legend>Add-ons (Multiple Selection)</legend>
-
-                        <input type="checkbox" id="bgInp" name="addons[]" value="background">
-                        <label for="bgInp">Background</label>
-
-                        <input type="checkbox" id="commercialInp" name="addons[]" value="commercial">
-                        <label for="commercialInp">Commercial Use</label>
+                            <p class="mult-input">
+                                <input type="checkbox" id="lowPrioInp" name="addons[]" value="slow_delivery">
+                                <label for="lowPrioInp">Low Priority</label>
+                            </p>
+                
+                            <p class="mult-input">
+                                <input type="checkbox" id="fastInp" name="addons[]" value="fast_delivery" disabled>
+                                <label for="fastInp">Quick Delivery</label>
+                            </p>
+                        </div>
                     </fieldset>
                 </fieldset>
 
-                <button type="submit">Send Commission Request</button>
+                <button class="form-button" type="submit">Send Commission Request</button>
             </form>
         </section>
 
-        <footer>
+        <footer class="site-footer">
             <small>&copy; 2026 Montserrat Barco Montemayor - All rights reserved. <strong>All of them.</strong></small>
         </footer>
     </main>

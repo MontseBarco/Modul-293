@@ -15,14 +15,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="/src/css/style.css">
-    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/art.css">
     
     <script src="../javascript/book.js" defer></script>
+    <script src="../javascript/responsive.js" defer></script>
 </head>
 <body>
-    <header>
-        <nav>
+    <header class="site-header">
+        <button class="icon nav-burger-menu" aria-label="Open navigation">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav class="site-nav">
             <ul>
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="gallery.html" aria-current="page"><b>Gallery</b></a></li>
@@ -30,191 +34,205 @@
                 <li><a href="about.html">About Me</a></li>
             </ul>
         </nav>
-        <a href="https://www.instagram.com/macaroniandcheese_101_" aria-label="Visit my instagram profile." target="_blank" rel="noreferrer"><i class="fa-brands fa-instagram"></i></a>
+        <a class="icon" href="https://www.instagram.com/macaroniandcheese_101_" aria-label="Visit my instagram profile." target="_blank" rel="noreferrer"><i class="fa-brands fa-instagram"></i></a>
     </header>
 
     <main>
 
-    <header>
-        <h2>My Art</h2>
-        <nav aria-label="Main gallery categories">
-            <ul>
-                <li><a href="#illustration-section">Illustration</a></li>
-                <li><a href="#animation-section">Animation</a></li>
-                <li><a href="#other-section">Other</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="illustration-section">
-        
-        <header>
-            <h3>Illustrations</h3>
-            <nav aria-label="Illustration sub-categories">
+        <header class="main-header">
+            <h1>My Art</h1>
+            <nav class="page-nav" aria-label="Main gallery categories">
                 <ul>
-                    <li><a href="#physical-illustrations">Physical</a></li>
-                    <li><a href="#digital-illustrations">Digital</a></li>
+                    <li><a href="#illustration-section">Illustration</a></li>
+                    <li><a href="#animation-section">Animation</a></li>
                 </ul>
             </nav>
         </header>
 
-        <section id="physical-illustrations">
+        <section class="theme-big" id="illustration-section">
             
-            <h4>Physical Artworks</h4> 
+            <header class="theme-header">
+                <h2>Illustrations</h2>
+            </header>
 
-            <ul>
+            <div class="artwork-list-container">
+                <ul class="artwork-list">
+                    <li>
+                        <article class="artwork-display">
+                            <figure>
+                                <picture class="artwork">
+                                    <source srcset="../../assets/images/digital_illustration/dig_bird.avif" type="image/avif">
+                                    <source srcset="../../assets/images/digital_illustration/dig_bird.webp" type="image/webp">
+                                    <img src="../../assets/images/digital_illustration/dig_bird.jpg" alt="A colourful digital painting of a bird on a branch." loading="lazy">
+                                </picture> 
+                            </figure>
+                            <h4>Bird</h4>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="artwork-display">
+                            <figure>
+                                <picture class="artwork">
+                                    <source srcset="../../assets/images/digital_illustration/dig_theeye.avif" type="image/avif">
+                                    <source srcset="../../assets/images/digital_illustration/dig_theeye.webp" type="image/webp">
+                                    <img src="../../assets/images/digital_illustration/dig_theeye.jpg"
+                                        alt="An agressive, darks scene, where the outlires of their species, angel and devil, fight for the opposite cause under watchful eye."
+                                        loading="lazy">
+                                </picture>
+                            </figure>
+                            <h4>The Eye</h4>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="artwork-display">
+                            <figure>
+                                <picture class="artwork">
+                                    <source srcset="../../assets/images/digital_illustration/dig_cookie.avif" type="image/avif">
+                                    <source srcset="../../assets/images/digital_illustration/dig_cookie.webp" type="image/webp">
+                                    <img src="../../assets/images/digital_illustration/dig_cookie.jpg"
+                                        alt="Frieren the Slayer peacefully eating cookies at sunset. A digital chibi style drawing." loading="lazy">
+                                </picture>
+                            </figure>
+                            <h4>Cookie</h4>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="artwork-display">
+                            <figure>
+                                <picture class="artwork">
+                                    <source srcset="../../assets/images/digital_illustration/dig_duck.avif" type="image/avif">
+                                    <source srcset="../../assets/images/digital_illustration/dig_duck.webp" type="image/webp">
+                                    <img src="../../assets/images/digital_illustration/dig_duck.jpg"
+                                        alt="A duck with a hat."
+                                        loading="lazy">
+                                </picture>
+                            </figure>
+                            <h4>Duck</h4>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="artwork-display">
+                            <figure>
+                                <picture class="artwork">
+                                    <source srcset="../../assets/images/digital_illustration/dig_cucumber.avif" type="image/avif">
+                                    <source srcset="../../assets/images/digital_illustration/dig_cucumer.webp" type="image/webp">
+                                    <img src="../../assets/images/digital_illustration/dig_cucumber.jpg" alt="A duck with a hat."
+                                        loading="lazy">
+                                </picture>
+                            </figure>
+                            <h4>Cucumber</h4>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="artwork-display">
+                            <figure>
+                                <picture class="artwork">
+                                    <source srcset="../../assets/images/digital_illustration/dig_crying.avif" type="image/avif">
+                                    <source srcset="../../assets/images/digital_illustration/dig_crying.webp" type="image/webp">
+                                    <img src="../../assets/images/digital_illustration/dig_crying.jpg" alt="A duck with a hat."
+                                        loading="lazy">
+                                </picture>
+                            </figure>
+                            <h4>Tears</h4>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="artwork-display">
+                            <figure>
+                                <picture class="artwork">
+                                    <source srcset="../../assets/images/digital_illustration/dig_athlete.avif" type="image/avif">
+                                    <source srcset="../../assets/images/digital_illustration/dig_athlete.webp" type="image/webp">
+                                    <img src="../../assets/images/digital_illustration/dig_athlete.jpg" alt="A duck with a hat."
+                                        loading="lazy">
+                                </picture>
+                            </figure>
+                            <h4>Athlete</h4>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="artwork-display">
+                            <figure>
+                                <picture class="artwork">
+                                    <source srcset="../../assets/images/digital_illustration/dig_fantasyland.avif" type="image/avif">
+                                    <source srcset="../../assets/images/digital_illustration/dig_fantasyland.webp" type="image/webp">
+                                    <img src="../../assets/images/digital_illustration/dig_fantasyland.jpg" alt="A duck with a hat."
+                                        loading="lazy">
+                                </picture>
+                            </figure>
+                            <h4>Praimar</h4>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="artwork-display">
+                            <figure>
+                                <picture class="artwork">
+                                    <source srcset="../../assets/images/digital_illustration/dig_slime.avif" type="image/avif">
+                                    <source srcset="../../assets/images/digital_illustration/dig_slime.webp" type="image/webp">
+                                    <img src="../../assets/images/digital_illustration/dig_slime.jpg" alt="A woman in black showing off her cool red slime."
+                                        loading="lazy">
+                                </picture>
+                            </figure>
+                            <h4>Slime</h4>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="artwork-display">
+                            <figure>
+                                <picture class="artwork">
+                                    <source srcset="../../assets/images/physical_illustration/constrained.avif" type="image/avif">
+                                    <source srcset="../../assets/images/physical_illustration/constrained.webp" type="image/webp">
+                                    <img src="../../assets/images/physical_illustration/constrained.jpg" alt="A bare woman, stripped of her identity, grasping out for something she does not yet know, suffocating in her inability to escape the ocean, being held down by her past, the bonds that got and shall keep her here forever."
+                                        loading="lazy">
+                                </picture>
+                            </figure>
+                            <h4>Slime</h4>
+                        </article>
+                    </li>
 
-                <li>
-                    <article class="artwork-display">
-                        <figure>
-                            <img src="../../assets/images/physical/constrained.png" alt="An acrylic painting on a small canvas of a woman being held down in the ocean ghasping for air in a desperate attempt to live.">
-                            <figcaption>Acrylics</figcaption>
-                        </figure>
-                        
-                        <div class="artwork-details">
-                            <h4>Constrained</h4>
-                            <p>Have you ever felt like you can't make any progress? Like you're physically unable to advance. Someone holds you back, and you can't make them let go. Trapped, you drown under the pressure that is being in their presence.</p>
-                        </div>
-                    </article>
-                </li>
-
-                <li>
-                    <article class="artwork-display">
-                        <figure>
-                            <img id="book-artworks" src="../../assets/images/physical/book0.png" alt="Blue toned ski pist surrounded by tall alpine trees.">
-                            <figcaption>Acrylics</figcaption>
-                        </figure>
-                        
-                        <div class="artwork-details">
-                            <h4>Ocean Snow</h4>
-                            <p>I don't like getting a sunburn in the winter, but skiing down a soft snowy mountain forest makes it as enjoyable as laying on the beach and dipping your toes in the sea. (SUNBURNS ARE BAD!)</p>
-                        </div>
-                    </article>
-                </li>
-
-                <li>
-                    <article class="artwork-display">
-                        <figure>
-                            <img src="../../assets/images/physical/flowers.png" alt="Four differently coloured and shaped flowers drawn atop a brown paper.">
-                            <figcaption>Coloured pencils, Markers, Posca Pens, Chalk Pens</figcaption>
-                        </figure>
-                        
-                        <div class="artwork-details">
-                            <h4>Bloom of Depth</h4>
-                            <p>In all honesty, this was a practice of mixing mediums. However, the result is nothing less than an artwork. I'd like to smell these flowers in a field of grass, basking in sunshine. (If I had a sense of smell.)</p>
-                        </div>
-                    </article>
-                </li>
-            </ul>
-
+                </ul>
+            </div>
+            
+            
         </section> 
 
-        <section id="digital-illustrations">
-            
-            <h4>Digital Artworks</h4> 
-
-            <ul>
-
+        <section class="theme-big" id="animation-section">
+            <header class="theme-header">
+                <h2>Animations</h2>
+            </header>
+        
+            <ul class="artwork-list">
                 <li>
                     <article class="artwork-display">
                         <figure>
-                            <img src="#" alt="#">
-                            <figcaption>#</figcaption>
+                            <video class="animation" controls preload="none">
+                                <source src="../../assets/videos/ROBUST - PA - MB, AN.mp4" type="video/webm">
+                                <source src="../../assets/videos/ROBUST - PA - MB, AN.webp" type="video/mp4">
+                
+                                Your browser does not support the video tag.
+                            </video>
                         </figure>
-                        
-                        <div class="artwork-details">
-                            <h4>#</h4>
-                            <p>#</p>
-                        </div>
+                        <h4>ROBUST</h4>
                     </article>
                 </li>
                 <li>
                     <article class="artwork-display">
                         <figure>
-                            <img src="#" alt="#">
-                            <figcaption>#</figcaption>
+                            <video class="animation" controls preload="none">
+                                <source src="../../assets/videos/bob_the_policeman.mp4" type="video/webm">
+                                <source src="../../assets/videos/bob_the_policeman.mp4" type="video/mp4">
+                
+                                Your browser does not support the video tag.
+                            </video>
                         </figure>
-                        
-                        <div class="artwork-details">
-                            <h4>#</h4>
-                            <p>#</p>
-                        </div>
-                    </article>
-                </li>
-                <li>
-                    <article class="artwork-display">
-                        <figure>
-                            <img src="#" alt="#">
-                            <figcaption>#</figcaption>
-                        </figure>
-                        
-                        <div class="artwork-details">
-                            <h4>#</h4>
-                            <p>#</p>
-                        </div>
+                        <h4>Bob the Policeman</h4>
                     </article>
                 </li>
             </ul>
-
-        </section> 
-        
-    </section> 
-
-    <section id="animation-section">
-        
-        <header>
-            <h3>Animations</h3>
-        </header>
-
-        <ul>
-                <li>
-                    <article class="artwork-display">
-                        <figure>
-                            <video src="#" alt="#">
-                            <figcaption>#</figcaption>
-                        </figure>
-                        
-                        <div class="artwork-details">
-                            <h4>#</h4>
-                            <p>#</p>
-                        </div>
-                    </article>
-                </li>
-
-                <li>
-                    <article class="artwork-display">
-                        <figure>
-                            <video src="#" alt="#">
-                            <figcaption>#</figcaption>
-                        </figure>
-                        
-                        <div class="artwork-details">
-                            <h4>#</h4>
-                            <p>#</p>
-                        </div>
-                    </article>
-                </li>
-
-                <li>
-                    <article class="artwork-display">
-                        <figure>
-                            <video src="#" alt="#">
-                            <figcaption>#</figcaption>
-                        </figure>
-                        
-                        <div class="artwork-details">
-                            <h4>#</h4>
-                            <p>#</p>
-                        </div>
-                    </article>
-                </li>
-            </ul>
-
-    </section>
+        </section>
 
     </main>
 
-    <footer>
+    <footer class="site-footer">
         <small>&copy; 2026 Montserrat Barco Montemayor - All rights reserved. <strong>All of them.</strong></small>
     </footer>
 

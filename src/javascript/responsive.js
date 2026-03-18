@@ -1,6 +1,10 @@
-const toggle = document.querySelector('.mobile-toggle');
-const nav = document.querySelector('.nav-links');
+const burgerMenu = document.querySelector('.nav-burger-menu');
+const siteNav = document.querySelector('.site-nav');
+const burgerIcon = burgerMenu.querySelector('i');
 
-toggle.addEventListener('click', () => {
-    nav.classList.toggle('active');
+burgerMenu.addEventListener('click', () => {
+    siteNav.classList.toggle('active');
+
+    burgerIcon.classList.toggle('fa-bars');
+    burgerIcon.classList.toggle('fa-xmark');
 });

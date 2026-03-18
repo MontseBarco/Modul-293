@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--blue);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+p {
+    font-size: 15px;
+}
+
+.main-header {
+    background-color: var(--blue);
+    background-image: url('../../assets/images/digital_illustration/dig_fish.jpg');
+    background-image: image-set(url('../../assets/images/digital_illustration/dig_fish.avif') type('image/avif'),
+            url('../../assets/images/digital_illustration/dig_fish.webp') type('image/webp'),
+            url('../../assets/images/digital_illustration/dig_fish.jpg') type('image/jpeg'));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 50vh;
+    max-height: 500px;
+    margin-top: -75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 20px;
+    color: var(--brown-black);
+
+    & h1 {
+        margin-right: 25vw;
+    }
+}
+
+.page-nav {
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(5px);
+    padding: 20px 40px;
+    border-radius: var(--radius-norm);
+    margin-right: 25vw;
+    margin-bottom: 50px;
+    width: fit-content;
+
+    & ul {
+        list-style-type: none;
+    }
+
+    & li {
+        margin-bottom: 10px;
+    }
+
+    & a {
+        text-decoration: none;
+        color: var(--brown-black);
+        margin-bottom: 10px;
+    }
+}
+
+.theme-big {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.theme-header {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+
+    & h2 {
+        width: 85vw;
+        text-align: center;
+        border-bottom: var(--border-black);
+        margin-bottom: 15px;
+    }
+}
+
+.artwork-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 40px;
+    max-width: 1300px;
+
+    & li {
+        transition: transform 0.3s ease, color 0.3s ease;
+
+        &:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-soft);
+        }
+    }
+}
+
+.artwork-list-container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.artwork-display {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--white);
+    border-radius: 5px;
+
+    & .artwork img {
+        border-radius: 5px;
+        margin: 10px;
+        margin-top: 25px;
+        width: 250px;
+        height: auto;
+    }
+
+    & h4 {
+        color: var(--brown-black);
+        padding: 15px 5px;
+        margin-top: -7px;
+        margin-bottom: 5px;
+        font-size: 25px;
+        background-color: var(--white);
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+    }
+}
+
+.animation {
+    border-radius: 5px;
+    margin: 10px;
+    margin-top: 25px;
+    width: 250px;
+    height: auto;
+}

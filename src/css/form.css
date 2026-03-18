@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+input,
+select,
+option,
+textarea,
+.form-button {
+    color: var(--darker-green);
+    font-family: 'Montserrat', sans-serif;
+    font-size: var(--text-size-small);
+}
+
+.main-header {
+    background-color: var(--minty-green);
+    background-image: url('../../assets/images/digital_illustration/dig_forest.jpg');
+    background-image: image-set(url('../../assets/images/digital_illustration/dig_forest.avif') type('image/avif'),
+            url('../../assets/images/digital_illustration/dig_forest.webp') type('image/webp'),
+            url('../../assets/images/digital_illustration/dig_forest.jpg') type('image/jpeg'));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 50vh;
+    max-height: 500px;
+    margin-top: -75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    border-bottom: var(--border-green);
+
+    & h1 {
+        margin-bottom: 50px;
+    }
+}
+
+.main-content {
+    padding: 5px 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.form {
+    background-color: var(--white);
+    padding: 10px 20px;
+    border-radius: var(--radius-norm);
+    margin-top: -20vh;
+    max-width: 1000px;
+    flex: 1;
+    box-shadow: var(--shadow-soft);
+
+    & * {
+        width: 100%;
+    }
+}
+
+.fieldset {
+    border: none;
+    margin-top: 25px;
+}
+
+.legend {
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--darker-green);
+    border-bottom: 2px solid var(--light-green);
+    margin-bottom: 10px;
+    cursor: default;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.bar-input {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+
+    & input,
+    & select,
+    & textarea {
+        width: 100%;
+        border: var(--border-green);
+        padding: 10px;
+        border-radius: var(--radius-soft);
+    }
+
+    & label {
+        background-color: var(--white);
+        padding: 10px;
+        width: fit-content;
+        font-size: var(--text-size);
+    }
+
+    & textarea {
+        resize: vertical;
+        min-height: fit-content;
+    }
+}
+
+.fake-fieldset {
+    width: 100%;
+    border: var(--border-green);
+    padding: 10px;
+    border-radius: var(--radius-soft);
+
+    & legend {
+        background-color: var(--white);
+        padding: 10px;
+        width: fit-content;
+        font-size: var(--text-size);
+    }
+
+    & .radio-input,
+    & .mult-input {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        width: fit-content;
+        padding: 10px;
+        background-color: var(--light-green);
+        white-space: nowrap;
+    }
+
+    & .radio-input {
+        border-radius: var(--radius-hard);
+    }
+
+    & .mult-input {
+        margin-bottom: 10px;
+        border-radius: var(--radius-soft);
+    }
+
+    & .form-row {
+        justify-content: flex-start;
+    }
+
+    & label,
+    & input {
+        width: auto;
+    }
+
+    & label {
+        padding: 0 5px;
+    }
+}
+
+.fake-fieldset-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.radio-input,
+.mult-input {
+    & * {
+        cursor: pointer;
+    }
+}
+
+.form-button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: var(--light-green);
+    color: var(--foresty-black);
+    font-weight: 500;
+    border: none;
+    border-radius: var(--radius-soft);
+    padding: 10px;
+    cursor: pointer;
+}
