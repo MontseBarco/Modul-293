@@ -49,7 +49,7 @@
         </header>
 
         <section class="main-content">
-            <form class="form" action="https://gibm.becknet.ch/formular/formular.php" method="POST" enctype="multipart/form-data">
+            <form class="form" action="https://gibm.becknet.ch/formular/formular.php" method="POST" enctype="multipart/form-data"> <!--$_Files-->
 
                 <fieldset class="fieldset" id="contact">
                     <legend class="legend">Contact Information</legend>
@@ -111,6 +111,7 @@
                     <p class="bar-input">
                         <label for="typeInp">Commission Type:</label>
                         <select id="typeInp" name="commission_type" required>
+                            <option value="none">Select</option>
                             <option value="sketch">Sketch</option>
                             <option value="lineart">Lineart</option>
                             <option value="full_color">Full Color</option>
@@ -135,7 +136,7 @@
                 
                     <p class="bar-input">
                         <label for="fileInp">Reference Images:</label>
-                        <input id="fileInp" name="reference_images[]" type="file" accept="image/*" multiple>
+                        <input id="fileInp" name="reference_images[]" type="file" accept="image/*" multiple value="none">
                     </p>
                 
                     <fieldset class="fake-fieldset">

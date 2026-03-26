@@ -17,7 +17,8 @@ textarea,
 .main-header {
     background-color: var(--minty-green);
     background-image: url('../../assets/images/digital_illustration/dig_forest.jpg');
-    background-image: image-set(url('../../assets/images/digital_illustration/dig_forest.avif') type('image/avif'),
+    background-image: image-set(
+            url('../../assets/images/digital_illustration/dig_forest.avif') type('image/avif'),
             url('../../assets/images/digital_illustration/dig_forest.webp') type('image/webp'),
             url('../../assets/images/digital_illustration/dig_forest.jpg') type('image/jpeg'));
     background-size: cover;
