@@ -35,6 +35,28 @@ body {
     background-color: var(--creamy-white);
     color: var(--foresty-black);
     font-family: 'Montserrat', sans-serif;
+
+    display: grid;
+        
+    grid-template-areas:
+    
+        "header header header"
+    
+        "main main main"
+    
+        "footer footer footer";
+}
+
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
 }
 
 main {
