@@ -198,7 +198,7 @@ nav ul li:hover {
     background-color: #615150;
     background-image: url('../../assets/images/brand/bgHome.jpg');
     background-image: 
-            image-set(url('../../assets/images/brand/bghome.avif') type('image/avif'),
+            image-set(url('../../assets/images/brand/bgHome.avif') type('image/avif'),
             url('../../assets/images/brand/bghome.webp') type('image/webp'),
             url('../../assets/images/brand/bghome.jpg') type('image/jpeg'));
     background-size: 100% auto;
