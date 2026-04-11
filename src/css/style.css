@@ -184,6 +184,23 @@ nav ul li:hover {
     }
 }
 
+@Media (min-width: 2500px){
+    .site-header {
+        padding-top: 15px;
+        padding-left: 200px;
+        padding-right: 200px;
+
+        & a {
+            font-size: 25px;
+        }
+
+        & .icon {
+            font-size: 35px;
+        }
+    }
+
+}
+
 
 .site-footer {
     margin-top: 10px;
