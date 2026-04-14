@@ -11,6 +11,7 @@
 
     & h1 {
         width: auto;
+        max-width: 1000px;
         margin-left: 40px;
         font-size: 5vw;
         color: var(--dark-red);

@@ -15,14 +15,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/art.css">
+    <link rel="stylesheet" href="../css/style.css" defer>
+    <link rel="stylesheet" href="../css/art.css" defer>
     
-    <script src="../javascript/book.js" defer></script>
     <script src="../javascript/responsive.js" defer></script>
 </head>
 <body>
     <header class="site-header">
+        <link rel="preload" as="image" href="../../assets/images/digital_illustration/dig_fish.avif" fetchpriority="high">
         <button class="icon nav-burger-menu" aria-label="Open navigation">
             <i class="fa-solid fa-bars"></i>
         </button>
@@ -175,7 +175,7 @@
                             <h3>Slime</h3>
                         </article>
                     </li>
-                    <li>
+                    <!-- <li>
                         <article class="artwork-display">
                             <figure>
                                 <picture class="artwork">
@@ -187,7 +187,7 @@
                             </figure>
                             <h3>Constrained</h3>
                         </article>
-                    </li>
+                    </li> -->
 
                 </ul>
             </div>

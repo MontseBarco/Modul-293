@@ -53,6 +53,7 @@ textarea,
     max-width: 1000px;
     flex: 1;
     box-shadow: var(--shadow-soft);
+    min-height: 500px;
 
     & * {
         width: 100%;
